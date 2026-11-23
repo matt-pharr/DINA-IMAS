@@ -2305,7 +2305,7 @@ c     toroidal flux and q
      *           + 0.5d0*(dabs(f(i)) + dabs(f(i-1)))*(sda(i) - sda(i-1))
       end do
 
-      q_sign = f_sign*sign(1.d0, psi(n) - psi(1))
+      q_sign = -f_sign*sign(1.d0, psi(n) - psi(1))
       do i = 2, n-1
         q(i) = (tflux(i+1) - tflux(i-1))/dabs(psi(i+1) - psi(i-1))
       end do
